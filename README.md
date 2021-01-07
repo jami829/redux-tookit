@@ -1,4 +1,4 @@
-# React-Redux ToDo를 만들면서 React-Redux 적용
+# React-Redux ToDo를 만들면서 Redux-toolkit 적용
 
 사용자가 오랫동안 머무르게 하고 싶은 프론트엔드 개발자 이재훈입니다.
 
