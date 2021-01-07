@@ -9,7 +9,7 @@ Learning Vanilla-Redux and React-Redux
 [리덕스 숙달 훈련]
 
 1. 바닐라 - 리덕스 적용
-2. 리액트 - 리덕스 적용
+2. 리액트 - 리덕스 적용  
 2-1. Redux-toolkit 적용 및 리팩토링 (createAction)
 
 현재 2-1단계 숙달 훈련 중 입니다.
