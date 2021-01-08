@@ -102,7 +102,7 @@ console.log("toDos", toDos)
 const store = configureStore({ reducer: toDos.reducer })
 
 
-// actionCreator을 주석처리하고 아래로 변경. 
+// actionCreator를 주석처리했으니 알맞게 아래와 같이 변경. 
 // 따라서 Home.js & ToDo.js도 수정해줘야 함.
 export const { add, remove } = toDos.actions;
 
