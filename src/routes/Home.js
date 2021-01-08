@@ -2,7 +2,9 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import ToDo from "../components/ToDo";
-import { actionCreators } from "../store";
+//! store.js에서 createSlice로 변경된 코드의 영향으로 아래의 코드도 맞게 변경 + 59번 줄 dispatch부분도 맞게 변경!
+// import { actionCreators } from "../store";
+import { add } from "../store";
 
 function Home({ toDos, addToDo }) {  // todos: mapStateToProp, addToDo: mapDispatchToProp && 객체로 감싸주는 이유는 props 객체 안에 "일부"로 map~~함수로"추가" toDos와 addToDo를 가져오는 것이기 때문
   const [text, setText] = useState("");
@@ -53,7 +55,8 @@ function mapDispatchToProps(dispatch, ownProps) {
   // console.log("dispatch", dispatch)
   // return { dispatch } // 이제 Home()의 파라미터에 dispatch를 사용할 수 있음. 이 한 줄을 props로 전달하기 때문. 아랫줄로 리팩토링
   return {
-    addToDo: (text) => dispatch(actionCreators.addToDo(text)) // 이 한 줄을 props로 전달하기 때문. 아랫줄로 리팩토링
+    // addToDo: (text) => dispatch(actionCreators.addToDo(text)) // 이 한 줄을 props로 전달하기 때문. 아랫줄로 리팩토링
+    addToDo: (text) => dispatch(add(text)) // 이 한 줄을 props로 전달하기 때문. 아랫줄로 리팩토링
   }
 }
 
