@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import { createAction, createReducer } from "@reduxjs/toolkit";
+import { configureStore, createAction, createReducer } from "@reduxjs/toolkit";
 import ToDo from "./components/ToDo";
 /*
 ! toolkit 적용하여 바로 아래에 ceateAction 리팩토링을 할 것임.
@@ -66,8 +66,12 @@ const reducer = createReducer([], {
   [deleteToDo]: (state, action) =>  // 리턴 O 
     state.filter(toDo => toDo.id !== action.payload)
 })
-
+/* 
+! configureStore로 리팩토링
 const store = createStore(reducer);
+ */
+const store = configureStore({ reducer })
+
 
 export const actionCreators = {
   addToDo,
